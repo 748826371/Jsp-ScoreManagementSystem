@@ -1,0 +1,10 @@
+D:\cxiapu\obj\Debug\netcoreapp2.0\cxiapu.csproj.CoreCompileInputs.cache
+D:\cxiapu\obj\Debug\netcoreapp2.0\cxiapu.AssemblyInfoInputs.cache
+D:\cxiapu\obj\Debug\netcoreapp2.0\cxiapu.AssemblyInfo.cs
+D:\cxiapu\bin\Debug\netcoreapp2.0\cxiapu.deps.json
+D:\cxiapu\bin\Debug\netcoreapp2.0\cxiapu.runtimeconfig.json
+D:\cxiapu\bin\Debug\netcoreapp2.0\cxiapu.runtimeconfig.dev.json
+D:\cxiapu\bin\Debug\netcoreapp2.0\cxiapu.dll
+D:\cxiapu\bin\Debug\netcoreapp2.0\cxiapu.pdb
+D:\cxiapu\obj\Debug\netcoreapp2.0\cxiapu.dll
+D:\cxiapu\obj\Debug\netcoreapp2.0\cxiapu.pdb
