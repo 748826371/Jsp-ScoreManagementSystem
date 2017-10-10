@@ -670,11 +670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\cxiapu\\cxiapu.csproj",
+      "projectUniqueName": "D:\\cxiapu\\cxiapu.csproj",
       "projectName": "cxiapu",
-      "projectPath": "d:\\cxiapu\\cxiapu.csproj",
+      "projectPath": "D:\\cxiapu\\cxiapu.csproj",
       "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-      "outputPath": "d:\\cxiapu\\obj\\",
+      "outputPath": "D:\\cxiapu\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
