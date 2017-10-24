@@ -262,12 +262,11 @@
 
 ### 业务流程图
 
-![](raw.githubusercontent.com/748826371/cxiapu/master/%E5%9B%BE%E8%A1%A8%E6%96%87%E4%BB%B6/b%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E5%AD%90%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg)
+![](./图表文件/b用户管理子流程图.jpg)
 
 ### 用户管理子系统用例视图
 
-<img src="raw.githubusercontent.com/748826371/cxiapu/master/%E5%9B%BE%E8%A1%A8%E6%96%87%E4%BB%B6/b%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E5%AD%90%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg">
-![](raw.githubusercontent.com/748826371/cxiapu/master/图表文件/a课程管理子系统.jpg)
+![](./图表文件/a用户管理子系统.jpg)
 
 ### 用例描述
 
@@ -306,11 +305,11 @@
 
 ### 业务流程图
 
-![](./图表文件/a课程管理子系统.jpg)
+![](./图表文件/b个人管理子流程图.jpg)
 
 ### 用例视图
 
-![](raw.githubusercontent.com/748826371/cxiapu/master/%E5%9B%BE%E8%A1%A8%E6%96%87%E4%BB%B6/a%E4%B8%AA%E4%BA%BA%E7%AE%A1%E7%90%86%E5%AD%90%E7%B3%BB%E7%BB%9F.jpg)
+![](./图表文件/a个人管理子系统.jpg)
 
 ### 用例描述
 
@@ -341,11 +340,11 @@
 
 ### 业务流程图
 
-![](raw.githubusercontent.com/748826371/cxiapu/master/%E5%9B%BE%E8%A1%A8%E6%96%87%E4%BB%B6/b%E8%AF%BE%E7%A8%8B%E7%AE%A1%E7%90%86%E5%AD%90%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg)
+![](./图表文件/b课程管理子流程图.jpg)
 
 ### 课程管理子系统用例视图
 
-![](raw.githubusercontent.com/748826371/cxiapu/master/%E5%9B%BE%E8%A1%A8%E6%96%87%E4%BB%B6/a%E8%AF%BE%E7%A8%8B%E7%AE%A1%E7%90%86%E5%AD%90%E7%B3%BB%E7%BB%9F.jpg)
+![](./图表文件/a课程管理子系统.jpg)
 
 ### 用例描述
 
