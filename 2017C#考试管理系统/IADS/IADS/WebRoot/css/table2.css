@@ -1,0 +1,61 @@
+.table{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-left: auto;
+		margin-right: auto;
+
+	width: 95%;
+}
+.table th {
+    text-align: center;
+    color: #ffffff;   
+    background-color: #46ABE6; 
+}
+.table td {
+    text-align: center;
+    max-width:380px;
+}
+.table-striped>tbody>tr:nth-of-type(even){background-color:#E9F1F6}
+
+table {
+    width: 756px;
+    height:360px;
+}
+
+thead  tr {
+    display: block;
+}
+               
+tbody {
+    display: block;
+    height: 260px;
+    overflow: scroll;
+}
+
+thead th {
+    width: 320px;
+    height:40px;
+}
+
+thead th + th {
+    width: 340px;
+}
+
+thead th + th + th {
+    width: 360px;
+}
+
+tbody td {
+    width: 340px;
+    height:40px;
+}
+
+tbody td + td {
+    width: 340px;
+        height:40px;
+}
+
+tbody td + td + td {
+    width: 340px;
+        height:40px;
+}

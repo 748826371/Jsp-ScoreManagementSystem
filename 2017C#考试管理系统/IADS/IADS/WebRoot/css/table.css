@@ -1,0 +1,60 @@
+.table{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width:95%;
+	width: 95%;
+}
+.table th {
+    text-align: center;
+    color: #ffffff;   /*琛ㄥご涓瓧浣撶殑棰滆壊锛岀櫧鑹�*/
+    background-color: #46ABE6; /*琛ㄥご涓殑鑳屾櫙棰滆壊锛岃摑鑹�*/
+}
+.table td {
+    text-align: center;
+}
+.table-striped>tbody>tr:nth-of-type(even){background-color:#E9F1F6}
+
+table {
+    width: 756px;
+    height:360px;
+}
+
+thead  tr {
+    display: block;
+}
+               
+tbody {
+    display: block;
+    height: 260px;
+    overflow: scroll;
+}
+
+thead th {
+    width: 200px;
+    height:40px;
+}
+
+thead th + th {
+    width: 240px;
+}
+
+thead th + th + th {
+    width: 316px;
+}
+
+tbody td {
+    width: 200px;
+    height:40px;
+}
+
+tbody td + td {
+    width: 240px;
+        height:40px;
+}
+
+tbody td + td + td {
+    width: 300px;
+        height:40px;
+}

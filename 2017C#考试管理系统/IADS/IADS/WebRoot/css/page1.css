@@ -1,0 +1,16 @@
+#top{
+	position: absolute;
+	height:198px;
+	width: 100%;
+	border: 1px;
+	border-color: red;
+	
+}
+#top1{
+
+	height:67px;
+	background-color: green;
+}
+#top2{
+	height:131px;
+}

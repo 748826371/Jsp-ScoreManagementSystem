@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head>   
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+<title>test</title>  
+<link rel="stylesheet" type="text/css" href="css/roomchartcommon.css" />  
+<script type="text/javascript" src="js/jquery-1.11.2.js"></script>  
+<script type="text/javascript" src="js/jquery.seat-charts.js"></script>  
+<script type="text/javascript">  
+    var price = 100; //房间价  
+    var beforeroom;  
+            var $cart = $('#rooms_selected'), //房间区  
+            $rooms_num = $('#rooms_num'), //房间数  
+            $total_price = $('#rooms_price'); //总金额  
+            $roomNo = $('#roomNo');//房间号  
+            $roomMsg = $('#roomMsg');//房间信息  
+            var sc ;  
+    var data1 = [['aa1','aa2','aa3','aa4','aa5','aa6'],['bb1','bb2','bb3','bb4','bb5','bb6'],  
+                      ['cc1','cc2','cc3','cc4','cc5','cc6']];  
+    var data2 = [['dd1','dd2','dd3','dd4','dd5','dd6'],['ee1','ee2','ee3','ee4','ee5','ee6'],  
+                      ['ff1','ff2','ff3','ff4','ff5','ff6']];                       
+    $(document).ready(function() {  
+        initchart(data1);  
+    });  
+    function initchart(dataList){  
+        sc = $('#room_area').seatCharts({  
+            map: [//房间结构图 f 代表已入住;e 代表未入住; 下划线 "_" 代表过道  
+                'ffffff',  
+                'eeeeee',  
+                'ffeeee'  
+            ],  
+            seats: {//设置已入住和未入住相关属性  
+                f: {  
+                    price: 125,  
+                    classes: 'first-class',  
+                    category: '已入住'  
+                },  
+                e: {  
+                    price: 70,  
+                    classes: 'economy-class',  
+                    category: '未入住'  
+                }  
+            },  
+            naming: {//设置行列等信息  
+                top: false, //不显示顶部横坐标（行）   
+                // rows: ['3', '2', '1'],  
+                // columns: ['A', 'B', 'C', 'G', 'D', 'F'],  
+                getLabel: function(character, row, column) { //返回房间信息   
+                    return column;  
+                },  
+                getData:function(dataList){  
+                    console.log(dataList)  
+                    return dataList;  
+                },  
+                data:dataList  
+            },  
+            legend: {//定义图例  
+                node: $('#roomlegend'),  
+                items: [  
+                    ['f', 'available', '未入住'],  
+                    ['e', 'available', '将到期'],  
+                    ['f', 'unavailable', '已入住']  
+                ]  
+            },  
+            click: function() {  
+                if (this.status() == 'available') { //若为可选状态,添加响应事件  
+                    var roomNoText = $('<li>' + this.settings.label + '号</li>')  
+                            .attr('id', 'cart-item-' + this.settings.id)  
+                            .data('seatId', this.settings.id).text();  
+                    $roomNo.text(roomNoText);  
+                    var roomMsgHtml = '<span>没有入住信息</span><br><input type="button" class="roominbtn" value="入住"/>';  
+                    $roomMsg.html(roomMsgHtml);  
+                    return 'selected';  
+                    $('<li>' + (this.settings.row + 1) + this.settings.label + '号</li>')  
+                            .attr('id', 'cart-item-' + this.settings.id)  
+                            .data('seatId', this.settings.id)  
+                            .appendTo($cart);  
+  
+                    $rooms_num.text(sc.find('selected').length + 1); //统计选票数量  
+                    $total_price.text(getTotalPrice(sc) + price);//计算票价总金额  
+  
+                    return 'selected';  
+                } else if (this.status() == 'selected') { //若为选中状态  
+  
+                    $rooms_num.text(sc.find('selected').length - 1);//更新票数量  
+                    $total_price.text(getTotalPrice(sc) - price);//更新票价总金额  
+                    $('#cart-item-' + this.settings.id).remove();//删除已预订座位  
+  
+                    return 'available';  
+                } else if (this.status() == 'unavailable') { //若为损坏状态  
+                    var roomNoText = $('<li>' + this.settings.label + '号</li>')  
+                            .attr('id', 'cart-item-' + this.settings.id)  
+                            .data('seatId', this.settings.id).text();  
+                            console.log(roomNoText);  
+                    $roomNo.text(roomNoText);  
+                    var roomMsgText = "张三、李四、王五、马六";  
+                    $roomMsg.text(roomMsgText);  
+                    return 'unavailable';  
+                } else {  
+                    return this.style();  
+                }  
+            }  
+        });  
+        //设置已售出的座位  
+        sc.get(['3_03', '2_05']).status('unavailable');  
+    }  
+    function refresh(){  
+        // console.log(sc);  
+        // sc.dataReload(data2)  
+        initchart(data2)  
+    }  
+</script>  
+</head>  
+<body>  
+    <button style="float:right;width:150px;height:30px;" onclick="refresh()">刷新图表</button>  
+    <div class="roomcontent">  
+        <div id="room_area">  
+        </div>  
+        <div id="roomlegend" class='of'></div>  
+        <div id="roomdetail">  
+            <h3>房间详细信息</h3>  
+            <div id="roomNo">  
+            </div>  
+            <div id="roomMsg">  
+            </div>  
+        </div>  
+    </div>  
+  
+  
+</body>  
+</html>  
